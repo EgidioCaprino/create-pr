@@ -6,6 +6,8 @@ import getCodeCommitRepositoryName from './getCodeCommitRepositoryName';
 
 const codeCommit = new CodeCommit({ apiVersion: '2015-04-13', region: config.codeCommit.region });
 
+const { region } = config.codeCommit;
+
 export default async ({ title, description }) => {
   const params = {
     title,
@@ -17,5 +19,5 @@ export default async ({ title, description }) => {
     }],
   };
   const { pullRequest: { pullRequestId } } = await codeCommit.createPullRequest(params).promise();
-  return `https://eu-west-1.console.aws.amazon.com/codesuite/codecommit/repositories/yeppik-react-native/pull-requests/${pullRequestId}/details?region=${config.codeCommit.region}`;
+  return `https://${region}.console.aws.amazon.com/codesuite/codecommit/repositories/yeppik-react-native/pull-requests/${pullRequestId}/details?region=${region}`;
 };
