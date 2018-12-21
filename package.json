@@ -1,5 +1,5 @@
 {
-  "name": "create-pr",
+  "name": "sme-create-pr",
   "version": "0.0.1",
   "description": "Command line tool for creating pull requests on CodeCommit",
   "main": "lib/index.js",
