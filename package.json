@@ -9,7 +9,7 @@
     "build": "babel src --out-dir lib --source-maps inline --copy-files"
   },
   "bin": {
-    "sme-create-pr": "npm start"
+    "sme-create-pr": "lib/index.js"
   },
   "repository": {
     "type": "git",
