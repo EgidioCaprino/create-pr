@@ -8,6 +8,9 @@
     "test": "jest",
     "build": "babel src --out-dir lib --source-maps inline --copy-files"
   },
+  "bin": {
+    "sme-create-pr": "npm start"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SocialMediaEmotions/create-pr.git"
