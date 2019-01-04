@@ -31,7 +31,7 @@ Create a `create-pr.json` file in your home directory.
 
 Get the Trello app key from the admin and your user token at [this url](https://trello.com/1/authorize?expiration=never&scope=read,write,account&response_type=token&name=Server%20Token&key=9db1e272ec74b493ee596730c350871e).
 
-Generate a Slack token from [this url](https://api.slack.com/custom-integrations/legacy-tokens).
+Generate a Slack token from [this url](https://api.slack.com/custom-integrations/legacy-tokens). Scroll down to `Legacy token generator` (you must be signed in).
 
 ## Usage
 
