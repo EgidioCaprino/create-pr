@@ -5,6 +5,10 @@
 
 ## Install
 
+```
+npm install --global sme-create-pr
+```
+
 Create a `create-pr.json` file in your home directory.
 
 ``` json
@@ -35,4 +39,4 @@ Generate a Slack token from [this url](https://api.slack.com/custom-integrations
 
 ## Usage
 
-In the project directory run `npx sme-create-pr`. You must follow a specific naming conventions for Git branches in order for this to work. That is `developerName/sprint|bug/trelloCardNumber`.
+In the project directory run `sme-create-pr`. You must follow a specific naming conventions for Git branches in order for this to work. That is `developerName/sprint|bug/trelloCardNumber`.
