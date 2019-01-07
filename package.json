@@ -1,12 +1,15 @@
 {
   "name": "sme-create-pr",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Command line tool for creating pull requests on CodeCommit",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
     "build": "babel src --out-dir lib --source-maps inline --copy-files"
+  },
+  "bin": {
+    "sme-create-pr": "lib/index.js"
   },
   "repository": {
     "type": "git",
