@@ -9,7 +9,7 @@ import postSlackMessage from './postSlackMessage';
 
 (async () => {
   const branch = await getCurrentGitBranch();
-  const [author, trelloBoard, trelloCardNumber] = branch.split('/');
+  const [, trelloBoard, trelloCardNumber] = branch.split('/');
   const card = await getTrelloCard(trelloBoard, parseInt(trelloCardNumber));
   const prUrl = await createPullRequest({
     title: card.name,
