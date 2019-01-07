@@ -9,15 +9,16 @@ const codeCommit = new CodeCommit({ apiVersion: '2015-04-13', region: config.cod
 const { region } = config.codeCommit;
 
 export default async ({ title, description }) => {
+  const repositoryName = await getCodeCommitRepositoryName();
   const params = {
     title,
     description,
     targets: [{
-      repositoryName: await getCodeCommitRepositoryName(),
+      repositoryName,
       sourceReference: await getCurrentGitBranch(),
       destinationReference: config.codeCommit.targetBranch,
     }],
   };
   const { pullRequest: { pullRequestId } } = await codeCommit.createPullRequest(params).promise();
-  return `https://${region}.console.aws.amazon.com/codesuite/codecommit/repositories/yeppik-react-native/pull-requests/${pullRequestId}/details?region=${region}`;
+  return `https://${region}.console.aws.amazon.com/codesuite/codecommit/repositories/${repositoryName}/pull-requests/${pullRequestId}/details?region=${region}`;
 };
