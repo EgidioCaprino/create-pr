@@ -40,3 +40,16 @@ Generate a Slack token from [this url](https://api.slack.com/custom-integrations
 ## Usage
 
 In the project directory run `sme-create-pr`. You must follow a specific naming conventions for Git branches in order for this to work. That is `developerName/sprint|bug/trelloCardNumber`.
+
+### Per-project configuration
+You can create another `create-pr.json` file in your project directory, with configurations you want to override.
+
+For instance, let's assume you globally merge PRs into `developers` branch but for one specific project you need to merge PRs into the `master` branch. Then you create a `create-pr.json` file in your project directory with the following content.
+
+``` json
+{
+  "codeCommit": {
+    "targetBranch": "master"
+  }
+}
+```
